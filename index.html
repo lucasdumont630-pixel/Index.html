@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fenix Tatoo Dénia · Estudio de tatuajes en Dénia, Alicante</title>
+<meta name="description" content="Fenix Tatoo Dénia: estudio de tatuajes en Dénia (Alicante). Realismo, fine line, tradicional, blackwork y más. Material estéril, trato cercano. Pide tu cita.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cormorant+Garamond:ital,wght@1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#0b0b0c;
+  --bg-2:#131315;
+  --bg-3:#1b1b1e;
+  --line:rgba(255,255,255,.08);
+  --fg:#efebe6;
+  --muted:#a29d97;
+  --dim:#6f6a65;
+  --red:#b3121f;
+  --red-hi:#d61f2c;
+  --gold:#c9a45c;
+  --radius:14px;
+  --display:'Pirata One', 'UnifrakturCook', serif;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --body:'Manrope', system-ui, -apple-system, sans-serif;
+  --gutter:clamp(16px,4vw,40px);
+  --max:1240px;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.05}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(72px,11vw,140px) 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font-family:var(--display);font-size:clamp(44px,7vw,84px);margin:14px 0 18px;letter-spacing:.01em}
+.h2 em{font-style:normal;color:var(--red-hi)}
+.lead{color:var(--muted);max-width:620px;font-size:clamp(16px,1.6vw,18px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;border:1px solid transparent;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:.25s}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 40px -10px rgba(179,18,31,.7)}
+.btn-red:hover{background:var(--red-hi);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.25);background:transparent}
+.btn-ghost:hover{border-color:var(--fg)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- Header ---------- */
+.header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.header.scrolled{background:rgba(11,11,12,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo span{font-family:var(--display);font-size:26px;line-height:1}
+.logo small{display:block;font:600 9px/1 var(--body);letter-spacing:.32em;color:var(--gold);margin-top:3px}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{text-decoration:none;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--fg)}
+.nav .btn{padding:11px 20px;color:#fff}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--fg);transition:.3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:26px}
+.menu-open .burger span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){top:21px;transform:rotate(-45deg)}
+@media (max-width:960px){
+  .burger{display:block;z-index:2}
+  .nav{position:fixed;inset:0;flex-direction:column;justify-content:center;gap:22px;background:rgba(11,11,12,.97);opacity:0;pointer-events:none;transition:opacity .3s}
+  .nav a{font-size:20px}
+  .menu-open .nav{opacity:1;pointer-events:auto}
+}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:0 0 clamp(56px,9vh,110px);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(ellipse 60% 55% at 72% 38%,rgba(179,18,31,.38),transparent 70%),
+  radial-gradient(ellipse 40% 40% at 20% 80%,rgba(201,164,92,.10),transparent 70%),
+  linear-gradient(180deg,#0e0e10,#0b0b0c)}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,11,12,.2) 0%,rgba(11,11,12,.15) 45%,var(--bg) 100%)}
+.hero-phoenix{position:absolute;right:-6%;top:8%;width:min(68vw,760px);z-index:-1;opacity:.9;color:var(--red)}
+.hero-phoenix path{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 3.6s ease forwards .2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.embers i{position:absolute;bottom:-10px;width:3px;height:3px;border-radius:50%;background:var(--red-hi);box-shadow:0 0 8px 2px rgba(214,31,44,.7);animation:rise linear infinite;opacity:0}
+@keyframes rise{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(var(--dx),-100vh);opacity:0}}
+.hero-kicker{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{font-family:var(--display);font-size:clamp(68px,15vw,200px);line-height:.86;letter-spacing:.005em}
+.hero h1 span{display:block;color:var(--red-hi)}
+.hero-tag{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,34px);color:var(--fg);margin:22px 0 34px;max-width:620px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:44px;font-size:13px;color:var(--muted)}
+.hero-trust span{display:flex;align-items:center;gap:8px}
+.hero-trust svg{width:16px;height:16px;color:var(--gold);flex:none}
+.scroll-cue{position:absolute;right:var(--gutter);bottom:40px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+@media (max-width:700px){.scroll-cue{display:none}.hero-phoenix{width:110vw;right:-30%;top:10%;opacity:.55}}
+
+/* ---------- Marquee ---------- */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--bg-2)}
+.marquee-track{display:flex;gap:48px;width:max-content;animation:marquee 34s linear infinite}
+.marquee span{font-family:var(--display);font-size:34px;color:var(--dim);white-space:nowrap;display:flex;align-items:center;gap:48px}
+.marquee span::after{content:"✦";font-size:14px;color:var(--red)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Placeholder art (sustituir por fotos reales) ---------- */
+.art{position:relative;overflow:hidden;background:var(--bg-3)}
+.art img{width:100%;height:100%;object-fit:cover}
+.art .ph{position:absolute;inset:0;display:grid;place-items:center;background:
+  radial-gradient(circle at 50% 40%,rgba(255,255,255,.05),transparent 60%),
+  repeating-linear-gradient(135deg,rgba(255,255,255,.015) 0 2px,transparent 2px 14px),
+  linear-gradient(160deg,#1e1d20,#121214)}
+.art .ph svg{width:52%;height:52%;color:rgba(239,235,230,.55);transition:transform .6s}
+.art .ph b{position:absolute;left:14px;bottom:12px;font:600 10px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- Artists ---------- */
+.artists-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+@media (max-width:1080px){.artists-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.artists-grid{grid-template-columns:1fr}}
+.artist{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .35s,border-color .35s}
+.artist:hover{transform:translateY(-6px);border-color:rgba(179,18,31,.5)}
+.artist .art{aspect-ratio:4/5}
+.artist .art .ph svg{width:40%}
+.artist-body{padding:22px 22px 24px}
+.artist h3{font-family:var(--display);font-size:36px}
+.artist .spec{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.tag.hot{border-color:rgba(179,18,31,.6);color:#f2b9bd}
+.artist p{color:var(--muted);font-size:14px}
+.ig{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;font-weight:600;text-decoration:none;color:var(--fg)}
+.ig svg{width:18px;height:18px}
+.ig:hover{color:var(--red-hi)}
+
+/* ---------- Gallery ---------- */
+.gallery{background:var(--bg-2)}
+.filters{display:grid;gap:14px;margin:44px 0 30px}
+.filter-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.filter-row::-webkit-scrollbar{display:none}
+.filter-row label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);align-self:center;min-width:64px;flex:none}
+.chip{flex:none;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:13px;color:var(--muted);transition:.2s}
+.chip:hover{color:var(--fg);border-color:rgba(255,255,255,.25)}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg);font-weight:600}
+.grid{columns:4 260px;column-gap:14px}
+.tile{break-inside:avoid;margin:0 0 14px;border-radius:10px;cursor:zoom-in;border:0;padding:0;width:100%;display:block;text-align:left}
+.tile .art{border-radius:10px}
+.tile:hover .ph svg{transform:scale(1.08) rotate(-2deg)}
+.tile .cap{position:absolute;inset:auto 0 0;padding:40px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:13px;opacity:0;transform:translateY(8px);transition:.3s;display:flex;justify-content:space-between;gap:8px}
+.tile .cap em{font-style:normal;color:var(--gold)}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
+@media (hover:none){.tile .cap{opacity:1;transform:none}}
+.tile.hide{display:none}
+.empty{display:none;color:var(--muted);padding:40px 0;text-align:center}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,6,7,.96);display:none;align-items:center;justify-content:center;padding:70px 16px}
+.lb.open{display:flex}
+.lb-figure{margin:0;max-width:min(92vw,900px);width:100%}
+.lb-figure .art{border-radius:12px;max-height:72vh;aspect-ratio:var(--ar,4/5);margin:0 auto;max-width:calc(72vh * var(--arn,.8))}
+.lb-figure figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:16px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.lb-figure figcaption strong{color:var(--fg);font-weight:600}
+.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:rgba(20,20,22,.8);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.lb-btn:hover{border-color:var(--fg)}
+.lb-btn svg{width:22px;height:22px}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb-next{right:16px;top:50%;transform:translateY(-50%)}
+@media (max-width:700px){.lb-prev,.lb-next{top:auto;bottom:18px;transform:none}.lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}}
+
+/* ---------- Styles ---------- */
+.styles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:56px}
+@media (max-width:900px){.styles-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.styles-grid{grid-template-columns:1fr}}
+.style{background:var(--bg);padding:34px 28px 36px;transition:background .3s}
+.style:hover{background:var(--bg-2)}
+.style .num{font-family:var(--serif);font-style:italic;color:var(--red-hi);font-size:20px}
+.style h3{font-family:var(--display);font-size:38px;margin:8px 0 12px}
+.style p{color:var(--muted);font-size:15px}
+.style .ideal{margin-top:16px;font-size:13px;color:var(--fg)}
+.style .ideal b{color:var(--gold);font-weight:600}
+
+/* ---------- Process ---------- */
+.process{background:var(--bg-2)}
+.steps{list-style:none;padding:0;margin:56px 0 0;display:grid;gap:0;counter-reset:s}
+.step{display:grid;grid-template-columns:90px 1fr 1.2fr;gap:28px;padding:30px 0;border-top:1px solid var(--line);align-items:start}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .n{font-family:var(--display);font-size:56px;line-height:.9;color:var(--red)}
+.step h3{font-family:var(--display);font-size:34px}
+.step p{color:var(--muted)}
+@media (max-width:760px){.step{grid-template-columns:56px 1fr;gap:6px 16px}.step .n{font-size:42px;grid-row:span 2}.step p{grid-column:2}}
+.care{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+@media (max-width:760px){.care{grid-template-columns:1fr}}
+.care-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.care-card h3{font-family:var(--display);font-size:32px;margin-bottom:16px}
+.care-card ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.care-card li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--muted);font-size:15px}
+.care-card li::before{content:"✓";color:var(--gold);font-weight:700}
+.care-card.no li::before{content:"✕";color:var(--red-hi)}
+.hygiene{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+@media (max-width:900px){.hygiene{grid-template-columns:repeat(2,1fr)}}
+.hyg{padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg)}
+.hyg svg{width:28px;height:28px;color:var(--gold);margin-bottom:12px}
+.hyg h4{margin:0 0 6px;font-size:15px}
+.hyg p{color:var(--muted);font-size:13px}
+
+/* ---------- Prices ---------- */
+.prices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+@media (max-width:900px){.prices-grid{grid-template-columns:1fr}}
+.price{border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;background:var(--bg-2);position:relative}
+.price.feat{border-color:rgba(179,18,31,.6);background:linear-gradient(180deg,rgba(179,18,31,.12),var(--bg-2) 60%)}
+.price .label{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.price .amount{font-family:var(--display);font-size:72px;line-height:1;margin:16px 0 6px}
+.price .amount small{font-family:var(--body);font-size:16px;color:var(--muted);margin-left:4px}
+.price p{color:var(--muted);font-size:15px}
+.price ul{margin:18px 0 0;padding-left:18px;color:var(--muted);font-size:14px;display:grid;gap:6px}
+.note{margin-top:24px;color:var(--dim);font-size:13px;max-width:760px}
+
+/* ---------- Booking ---------- */
+.booking{background:var(--bg-2)}
+.booking-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:960px){.booking-wrap{grid-template-columns:1fr}}
+.booking-aside ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:18px}
+.booking-aside li{display:grid;grid-template-columns:36px 1fr;gap:14px;color:var(--muted);font-size:15px}
+.booking-aside li b{display:block;color:var(--fg);font-weight:600}
+.booking-aside li span.i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold);font-family:var(--serif);font-style:italic;font-size:18px}
+form{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:620px){form{grid-template-columns:1fr}}
+.field{display:grid;gap:8px}
+.field.full{grid-column:1/-1}
+.field label,.field legend{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0}
+.field label i{color:var(--red-hi);font-style:normal}
+input,select,textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:16px;transition:border-color .2s;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a29d97' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:44px}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+input:user-invalid,select:user-invalid,textarea:user-invalid{border-color:var(--red-hi)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;position:relative}
+.sizes input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.sizes label{padding:10px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:14px;text-transform:none;letter-spacing:0;color:var(--muted);font-weight:500;transition:.2s}
+.sizes input:checked+label{border-color:var(--red);color:var(--fg);background:rgba(179,18,31,.14)}
+.sizes input:focus-visible+label{outline:2px solid var(--gold);outline-offset:2px}
+.drop{border:1.5px dashed rgba(255,255,255,.18);border-radius:12px;padding:26px;text-align:center;cursor:pointer;transition:.2s;color:var(--muted);font-size:14px}
+.drop:hover,.drop.over{border-color:var(--gold);background:rgba(201,164,92,.05)}
+.drop strong{color:var(--fg)}
+.drop input{display:none}
+.thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.thumbs figure{margin:0;position:relative;width:76px;height:76px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.thumbs button{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(0,0,0,.75);cursor:pointer;font-size:13px;line-height:1}
+.check{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:14px;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400;align-items:start}
+.check input{width:18px;height:18px;padding:0;margin-top:3px;appearance:auto;accent-color:var(--red)}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.form-foot small{color:var(--dim);font-size:13px;max-width:360px}
+.form-msg{grid-column:1/-1;display:none;padding:18px 20px;border-radius:10px;border:1px solid rgba(201,164,92,.4);background:rgba(201,164,92,.07);font-size:15px}
+.form-msg.show{display:block}
+.form-msg a{color:var(--gold)}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px)}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr}}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font-size:clamp(17px,2vw,20px);font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-7px;background:
+  linear-gradient(var(--red-hi),var(--red-hi)) center/14px 2px no-repeat,
+  linear-gradient(var(--red-hi),var(--red-hi)) center/2px 14px no-repeat;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 0 26px;color:var(--muted);max-width:680px}
+details .a p+p{margin-top:10px}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--bg-2);padding-bottom:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+@media (max-width:520px){.info{grid-template-columns:1fr}}
+.info > div{background:var(--bg);padding:26px}
+.info h3{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;font-family:var(--body);margin-bottom:12px}
+.info p,.info a{color:var(--fg);font-size:15px;text-decoration:none}
+.info a:hover{color:var(--red-hi)}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:14px;color:var(--muted)}
+.hours b{color:var(--fg);font-weight:500;text-align:right}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.2s}
+.socials a:hover{border-color:var(--red);color:var(--red-hi)}
+.socials svg{width:18px;height:18px}
+.map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--bg-3)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(1) invert(.92) contrast(.9) brightness(.9)}
+.cta-band{margin-top:clamp(72px,10vw,120px);padding:clamp(56px,8vw,96px) 0;text-align:center;border-top:1px solid var(--line);background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(179,18,31,.25),transparent 70%)}
+.cta-band .h2{margin-bottom:26px}
+footer{padding:28px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* Mobile sticky CTA */
+.mcta{display:none}
+@media (max-width:700px){
+  .mcta{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;transform:translateY(140%);transition:transform .35s}
+  .mcta.show{transform:none}
+  .mcta .btn{flex:1}
+}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .hero-phoenix path{stroke-dashoffset:0}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<!-- Iconos SVG reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 2.2 1.6 3.6 3.9 3.8v3a7 7 0 0 1-3.9-1.2v6.1A5.7 5.7 0 1 1 10.9 9v3.1a2.7 2.7 0 1 0 2.7 2.6V3h3z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-needle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m14 4 6 6M17 7l-9 9-3 1 1-3 9-9M4 20l2-2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-phoenix" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 54c-2-6-2-11 0-16 2 5 2 10 0 16z"/><path d="M32 38c-6-2-12-8-14-16 5 4 9 5 14 5"/><path d="M32 38c6-2 12-8 14-16-5 4-9 5-14 5"/><path d="M18 22C12 18 8 12 8 6c5 5 10 7 16 8"/><path d="M46 22c6-4 10-10 10-16-5 5-10 7-16 8"/><path d="M32 27c-3-3-3-8 0-13 3 5 3 10 0 13z"/><circle cx="32" cy="10" r="2.4"/></symbol>
+</svg>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Fenix Tatoo Dénia, inicio">
+      <svg style="color:var(--red-hi)"><use href="#i-phoenix"/></svg>
+      <div><span>Fenix Tatoo</span><small>DÉNIA · ALICANTE</small></div>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#artistas">Artistas</a>
+      <a href="#galeria">Galería</a>
+      <a href="#estilos">Estilos</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#reservas" class="btn btn-red">Pide tu cita</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ 1. PORTADA ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-media" aria-hidden="true">
+    <!-- Para usar vídeo de portada, descomenta y apunta a tu archivo:
+    <video autoplay muted loop playsinline poster="img/portada.jpg"><source src="video/portada.mp4" type="video/mp4"></video>
+    -->
+  </div>
+  <svg class="hero-phoenix" viewBox="0 0 600 600" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+    <path d="M300 540c-24-60-24-120 0-180 24 60 24 120 0 180z"/>
+    <path d="M300 360c-70-20-140-90-170-190 60 50 110 64 170 64"/>
+    <path d="M300 360c70-20 140-90 170-190-60 50-110 64-170 64"/>
+    <path d="M130 170C70 130 30 70 26 10c56 56 120 84 190 96"/>
+    <path d="M470 170c60-40 100-100 104-160-56 56-120 84-190 96"/>
+    <path d="M160 210c-40-10-80-40-104-80M440 210c40-10 80-40 104-80"/>
+    <path d="M190 250c-30 0-60-14-84-40M410 250c30 0 60-14 84-40"/>
+    <path d="M300 234c-34-30-34-90 0-150 34 60 34 120 0 150z"/>
+    <circle cx="300" cy="70" r="18"/>
+    <path d="M270 540c-10 20-30 34-50 40M330 540c10 20 30 34 50 40M300 540v50"/>
+  </svg>
+  <div class="embers" id="embers" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <p class="hero-kicker">Estudio de tatuajes · Dénia, Alicante</p>
+    <h1>Fenix<span>Tatoo</span></h1>
+    <p class="hero-tag">Renace en tu piel. Arte que se queda contigo para siempre.</p>
+    <div class="hero-actions">
+      <a href="#reservas" class="btn btn-red">Pide tu cita</a>
+      <a href="#galeria" class="btn btn-ghost">Ver trabajos</a>
+    </div>
+    <div class="hero-trust">
+      <span><svg><use href="#i-shield"/></svg>Material estéril y de un solo uso</span>
+      <span><svg><use href="#i-heart"/></svg>Ideal para tu primer tatuaje</span>
+      <span><svg><use href="#i-needle"/></svg>Diseños 100% a medida</span>
+    </div>
+  </div>
+  <span class="scroll-cue">Desliza</span>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Realismo</span><span>Fine line</span><span>Tradicional</span><span>Blackwork</span><span>Neotradicional</span><span>Lettering</span>
+    <span>Realismo</span><span>Fine line</span><span>Tradicional</span><span>Blackwork</span><span>Neotradicional</span><span>Lettering</span>
+  </div>
+</div>
+
+<!-- ============ 2. ARTISTAS ============ -->
+<section id="artistas">
+  <div class="wrap">
+    <span class="eyebrow">El equipo</span>
+    <h2 class="h2 reveal">Manos que <em>cuentan</em> historias</h2>
+    <p class="lead reveal">Cada artista tiene su firma. Mira sus trabajos, elige con quién conectas y cuéntanos tu idea: te asesoramos sin compromiso.</p>
+    <div class="artists-grid" id="artistsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 3. GALERÍA ============ -->
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <span class="eyebrow">Portfolio</span>
+    <h2 class="h2 reveal">Nuestro <em>trabajo</em> habla</h2>
+    <p class="lead reveal">Filtra por estilo o por artista y toca cualquier pieza para verla en grande.</p>
+    <div class="filters">
+      <div class="filter-row" role="group" aria-label="Filtrar por estilo" id="fStyle"><label>Estilo</label></div>
+      <div class="filter-row" role="group" aria-label="Filtrar por artista" id="fArtist"><label>Artista</label></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">No hay piezas con esa combinación todavía. Prueba otro filtro.</p>
+  </div>
+</section>
+
+<!-- ============ 4. ESTILOS ============ -->
+<section id="estilos">
+  <div class="wrap">
+    <span class="eyebrow">Estilos</span>
+    <h2 class="h2 reveal">Encuentra <em>tu</em> lenguaje</h2>
+    <p class="lead reveal">¿No sabes qué estilo encaja contigo? Aquí tienes una guía rápida. Y si sigues con dudas, para eso estamos.</p>
+    <div class="styles-grid" id="stylesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 5. PROCESO ============ -->
+<section class="process" id="proceso">
+  <div class="wrap">
+    <span class="eyebrow">El proceso</span>
+    <h2 class="h2 reveal">De la idea a la <em>piel</em></h2>
+    <p class="lead reveal">Si es tu primera vez, tranquilo: te acompañamos en cada paso y resolvemos todas tus dudas antes de empezar.</p>
+    <ol class="steps">
+      <li class="step reveal"><span class="n">01</span><h3>Consulta</h3><p>Nos escribes con tu idea, la zona y el tamaño. Te asesoramos sobre estilo, ubicación y viabilidad, y te damos un presupuesto orientativo. Sin coste ni compromiso.</p></li>
+      <li class="step reveal"><span class="n">02</span><h3>Diseño</h3><p>Tu artista crea una pieza única para ti. Reservas la fecha con un pequeño depósito y, antes de la sesión, revisamos juntos el diseño para ajustar lo que haga falta.</p></li>
+      <li class="step reveal"><span class="n">03</span><h3>Sesión</h3><p>Probamos el stencil en tu piel hasta que te encante la colocación. Todo el material se abre delante de ti: agujas y cartuchos estériles de un solo uso. Paramos cuando lo necesites.</p></li>
+      <li class="step reveal"><span class="n">04</span><h3>Cicatrización</h3><p>Te vas con film protector y una guía de cuidados por escrito. Tarda unas 2–4 semanas en curar por fuera. Durante ese tiempo estamos a un mensaje de distancia.</p></li>
+      <li class="step reveal"><span class="n">05</span><h3>Retoque</h3><p>Si tras la curación alguna zona necesita repaso, el primer retoque dentro de los 2 meses está incluido.</p></li>
+    </ol>
+
+    <div class="care">
+      <div class="care-card reveal">
+        <h3>Cuidados: sí</h3>
+        <ul>
+          <li>Lávate las manos antes de tocar el tatuaje.</li>
+          <li>Lava la zona 2–3 veces al día con agua tibia y jabón neutro, sécala a toquecitos con papel.</li>
+          <li>Aplica una capa muy fina de la crema que te recomendemos.</li>
+          <li>Usa ropa holgada y de algodón sobre la zona.</li>
+          <li>Tras curar, protector solar 50+ siempre que vayas a la playa. En Dénia, imprescindible.</li>
+        </ul>
+      </div>
+      <div class="care-card no reveal">
+        <h3>Cuidados: no</h3>
+        <ul>
+          <li>Nada de mar, piscina, sauna ni baños largos durante 2–3 semanas.</li>
+          <li>No expongas el tatuaje al sol mientras cura.</li>
+          <li>No rasques ni arranques las costritas, aunque pique.</li>
+          <li>Evita el ejercicio intenso que roce o haga sudar la zona los primeros días.</li>
+          <li>No te pongas exceso de crema: la piel también necesita respirar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hygiene">
+      <div class="hyg reveal"><svg><use href="#i-shield"/></svg><h4>Material de un solo uso</h4><p>Agujas, cartuchos, guantes y protecciones nuevos para cada cliente.</p></div>
+      <div class="hyg reveal"><svg><use href="#i-drop"/></svg><h4>Tintas certificadas</h4><p>Tintas veganas que cumplen la normativa europea REACH.</p></div>
+      <div class="hyg reveal"><svg><use href="#i-needle"/></svg><h4>Protocolo sanitario</h4><p>Desinfección de cabina entre sesiones y formación higiénico-sanitaria al día.</p></div>
+      <div class="hyg reveal"><svg><use href="#i-heart"/></svg><h4>Sin prisas</h4><p>Tu comodidad primero. Pausas, agua y buena música incluidas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. PRECIOS ============ -->
+<section id="precios">
+  <div class="wrap">
+    <span class="eyebrow">Precios orientativos</span>
+    <h2 class="h2 reveal">Claro <em>desde</em> el principio</h2>
+    <p class="lead reveal">Cada pieza es única, así que el precio final depende del tamaño, el detalle y la zona. Siempre sabrás el presupuesto antes de empezar.</p>
+    <div class="prices-grid">
+      <div class="price reveal">
+        <span class="label">Tarifa mínima</span>
+        <div class="amount">60€</div>
+        <p>Para piezas pequeñas y sencillas: fine line, símbolos, lettering corto.</p>
+        <ul><li>Incluye material y diseño</li><li>Primer retoque incluido</li></ul>
+      </div>
+      <div class="price feat reveal">
+        <span class="label">Precio por hora</span>
+        <div class="amount">90€<small>/ hora</small></div>
+        <p>Para piezas medianas, grandes y proyectos de varias sesiones.</p>
+        <ul><li>Presupuesto cerrado por pieza cuando es posible</li><li>Sesiones de día completo: consúltanos</li></ul>
+      </div>
+      <div class="price reveal">
+        <span class="label">Depósito</span>
+        <div class="amount">50€</div>
+        <p>Para reservar tu fecha. Se descuenta íntegro del precio final.</p>
+        <ul><li>Cambio de fecha gratis avisando con 48 h</li><li>Se pierde si no vienes o avisas con menos de 48 h</li></ul>
+      </div>
+    </div>
+    <p class="note">* Precios orientativos con IVA incluido. Cover-ups y retoques de trabajos de otros estudios se valoran en persona.</p>
+  </div>
+</section>
+
+<!-- ============ 7. RESERVAS ============ -->
+<section class="booking" id="reservas">
+  <div class="wrap booking-wrap">
+    <div class="booking-aside">
+      <span class="eyebrow">Reservas</span>
+      <h2 class="h2 reveal">Cuéntanos tu <em>idea</em></h2>
+      <p class="lead reveal">Cuanto más detalle nos des, mejor podremos asesorarte. Respondemos en menos de 48 h con propuesta, presupuesto y fechas disponibles.</p>
+      <ul>
+        <li><span class="i">1</span><div><b>Envía el formulario</b>Con tu idea y algunas referencias.</div></li>
+        <li><span class="i">2</span><div><b>Te respondemos</b>Por WhatsApp o email, con presupuesto orientativo.</div></li>
+        <li><span class="i">3</span><div><b>Reservas fecha</b>Con un depósito de 50€ que se descuenta del total.</div></li>
+      </ul>
+    </div>
+
+    <!-- FORMULARIO: para recibir los envíos (con imágenes) por email, crea un formulario gratuito en
+         https://formspree.io y pega la URL en data-endpoint (p. ej. https://formspree.io/f/xxxxxxx). -->
+    <form id="bookingForm" data-endpoint="" novalidate>
+      <div class="field">
+        <label for="f-name">Nombre <i>*</i></label>
+        <input id="f-name" name="nombre" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-age">Edad <i>*</i></label>
+        <input id="f-age" name="edad" type="number" inputmode="numeric" min="16" max="99" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Teléfono / WhatsApp <i>*</i></label>
+        <input id="f-phone" name="telefono" type="tel" autocomplete="tel" required pattern="[+0-9 ()-]{9,}">
+      </div>
+      <div class="field">
+        <label for="f-email">Email <i>*</i></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-artist">Artista preferido</label>
+        <select id="f-artist" name="artista"><option value="Sin preferencia">Sin preferencia</option></select>
+      </div>
+      <div class="field">
+        <label for="f-zone">Zona del cuerpo <i>*</i></label>
+        <select id="f-zone" name="zona" required>
+          <option value="">Selecciona…</option>
+          <option>Antebrazo</option><option>Brazo / hombro</option><option>Mano / dedos</option>
+          <option>Muñeca</option><option>Pecho</option><option>Espalda</option><option>Costillas</option>
+          <option>Clavícula / cuello</option><option>Pierna / muslo</option><option>Gemelo</option>
+          <option>Tobillo / pie</option><option>Otra (indícalo en la idea)</option>
+        </select>
+      </div>
+      <fieldset class="field full">
+        <legend>Tamaño aproximado <i style="color:var(--red-hi);font-style:normal">*</i></legend>
+        <div class="sizes">
+          <input type="radio" name="tamano" id="s1" value="Mini (menos de 5 cm)" required><label for="s1">Mini · &lt;5 cm</label>
+          <input type="radio" name="tamano" id="s2" value="Pequeño (5–10 cm)"><label for="s2">Pequeño · 5–10 cm</label>
+          <input type="radio" name="tamano" id="s3" value="Mediano (10–20 cm)"><label for="s3">Mediano · 10–20 cm</label>
+          <input type="radio" name="tamano" id="s4" value="Grande (más de 20 cm)"><label for="s4">Grande · &gt;20 cm</label>
+          <input type="radio" name="tamano" id="s5" value="Proyecto grande (manga, espalda…)"><label for="s5">Manga / espalda</label>
+        </div>
+      </fieldset>
+      <div class="field full">
+        <label for="f-idea">Idea del diseño <i>*</i></label>
+        <textarea id="f-idea" name="idea" required placeholder="Cuéntanos qué te gustaría, qué significa para ti, si lo quieres en negro o color, estilo que te inspira…"></textarea>
+      </div>
+      <div class="field full">
+        <span class="field" style="gap:0"><label for="f-files">Imágenes de referencia (hasta 5)</label></span>
+        <label class="drop" id="drop" for="f-files">
+          <input id="f-files" name="referencias" type="file" accept="image/*" multiple>
+          <strong>Toca para subir</strong> o arrastra tus imágenes aquí<br><small>JPG, PNG o HEIC · máx. 8 MB cada una</small>
+        </label>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div class="field full">
+        <label class="check"><input type="checkbox" name="primera_vez" value="Sí"> Es mi primer tatuaje (te dedicaremos un rato extra para explicártelo todo).</label>
+        <label class="check"><input type="checkbox" required name="privacidad" value="Aceptada"> Acepto que Fenix Tatoo Dénia use estos datos solo para responder a mi solicitud. <i style="color:var(--red-hi);font-style:normal">*</i></label>
+      </div>
+      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      <div class="form-foot">
+        <small>Enviar la solicitud no te compromete a nada. La cita se confirma al abonar el depósito.</small>
+        <button class="btn btn-red" type="submit" id="submitBtn">Enviar solicitud</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 8. FAQ ============ -->
+<section id="faq">
+  <div class="wrap faq-wrap">
+    <div>
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h2 reveal">Sin <em>miedo</em> a preguntar</h2>
+      <p class="lead reveal">Las dudas más habituales de quien se tatúa por primera vez. ¿La tuya no está? Escríbenos por WhatsApp.</p>
+    </div>
+    <div>
+      <details>
+        <summary>¿Cuál es la edad mínima para tatuarse?</summary>
+        <div class="a"><p>Tatuamos a partir de 18 años con DNI. Entre 16 y 17 años, solo con autorización firmada y presencia de padre, madre o tutor legal durante toda la sesión, y únicamente en piezas pequeñas y zonas discretas. A menores de 16 no tatuamos.</p></div>
+      </details>
+      <details>
+        <summary>¿Duele mucho?</summary>
+        <div class="a"><p>Sinceramente: algo molesta, pero casi todo el mundo dice que es mucho más llevadero de lo que imaginaba. Se parece a un arañazo continuo.</p><p>Depende de la zona: antebrazo, brazo exterior y muslo son de las más suaves; costillas, pies, manos o columna son más sensibles. Hacemos pausas siempre que lo necesites.</p></div>
+      </details>
+      <details>
+        <summary>¿Cómo me preparo para la sesión?</summary>
+        <div class="a"><p>Duerme bien, come algo antes de venir y bebe mucha agua. Evita el alcohol las 24 h previas y no tomes aspirina ni ibuprofeno ese día (aumentan el sangrado).</p><p>Trae ropa cómoda que deje accesible la zona, y no tomes el sol sobre ella la semana anterior. Si tienes alguna condición médica, alergia o tomas medicación, cuéntanoslo al reservar.</p></div>
+      </details>
+      <details>
+        <summary>¿Puedo cancelar o cambiar mi cita?</summary>
+        <div class="a"><p>Sí. Si avisas con al menos 48 h de antelación, cambiamos la fecha sin coste y mantienes tu depósito. Si cancelas con menos de 48 h o no te presentas, el depósito se pierde, ya que cubre el tiempo de diseño y la reserva de agenda.</p><p>Si te pones enfermo/a, avísanos: lo hablamos y buscamos solución.</p></div>
+      </details>
+      <details>
+        <summary>¿Puedo traer mi propio diseño?</summary>
+        <div class="a"><p>¡Claro! Lo usaremos como referencia y lo adaptamos para que funcione bien en la piel y envejezca bien con los años. No copiamos trabajos de otros tatuadores: los respetamos tanto como al tuyo.</p></div>
+      </details>
+      <details>
+        <summary>¿Es seguro? ¿Qué medidas de higiene seguís?</summary>
+        <div class="a"><p>Total seguridad: agujas y cartuchos estériles de un solo uso que abrimos delante de ti, guantes de nitrilo, protecciones desechables en todas las superficies, tintas certificadas y desinfección completa de la cabina entre clientes.</p></div>
+      </details>
+      <details>
+        <summary>¿Cómo puedo pagar?</summary>
+        <div class="a"><p>En efectivo, tarjeta o Bizum. El depósito se puede abonar por Bizum o transferencia.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CONTACTO ============ -->
+<!-- IMPORTANTE: sustituye dirección, teléfono, horario y redes por los datos reales del estudio. -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2 class="h2 reveal">Ven a <em>vernos</em></h2>
+    <p class="lead reveal">Pásate a conocer el estudio, tomarte un café y hablar de tu idea. Mejor con cita, pero si estamos libres te atendemos encantados.</p>
+    <div class="contact-grid">
+      <div class="info">
+        <div>
+          <h3>Dirección</h3>
+          <p>Calle Ejemplo, 00<br>03700 Dénia, Alicante</p>
+          <p style="margin-top:10px"><a href="https://maps.google.com/?q=D%C3%A9nia%2C+Alicante" target="_blank" rel="noopener">Cómo llegar →</a></p>
+        </div>
+        <div>
+          <h3>Teléfono</h3>
+          <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+          <p style="margin-top:10px"><a href="https://wa.me/34600000000" target="_blank" rel="noopener" id="waLink">Escríbenos por WhatsApp →</a></p>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <div class="hours">
+            <span>Lunes</span><b>Cerrado</b>
+            <span>Mar – Vie</span><b>10:30 – 14:00 · 16:30 – 20:30</b>
+            <span>Sábado</span><b>10:30 – 14:00</b>
+            <span>Domingo</span><b>Cerrado</b>
+          </div>
+        </div>
+        <div>
+          <h3>Redes</h3>
+          <div class="socials">
+            <a href="https://instagram.com/fenixtatoodenia" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+            <a href="https://facebook.com/fenixtatoodenia" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+            <a href="https://tiktok.com/@fenixtatoodenia" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+          </div>
+          <p style="margin-top:12px;color:var(--muted);font-size:14px">hola@fenixtatoodenia.com</p>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Mapa de Fenix Tatoo en Dénia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=D%C3%A9nia%2C%20Alicante&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="cta-band">
+    <div class="wrap">
+      <h2 class="h2">¿Listo para <em>renacer</em>?</h2>
+      <a href="#reservas" class="btn btn-red">Pide tu cita</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Fenix Tatoo Dénia · Estudio de tatuajes en Dénia, Alicante</span>
+    <span>Hecho con tinta y fuego</span>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta"><a href="#reservas" class="btn btn-red">Pide tu cita</a></div>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar"><svg><use href="#i-x"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior"><svg><use href="#i-l"/></svg></button>
+  <figure class="lb-figure">
+    <div class="art" id="lbArt"></div>
+    <figcaption><strong id="lbTitle"></strong><span id="lbMeta"></span></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente"><svg><use href="#i-r"/></svg></button>
+</div>
+
+<script>
+/* =====================================================================
+   CONTENIDO EDITABLE
+   - Artistas: cambia nombre, texto, Instagram y añade "foto" (ruta a imagen).
+   - Galería: añade "src" con la ruta a cada foto (p. ej. "img/galeria/01.jpg").
+     Mientras no haya "src", se muestra una ilustración provisional.
+   ===================================================================== */
+const STYLES = {
+  realismo:      { name:'Realismo',       desc:'Retratos, animales y escenas con volumen, luces y sombras que parecen fotografía. Requiere piezas medianas o grandes para lucir todo su detalle.', ideal:'retratos, mascotas, naturaleza' },
+  fineline:      { name:'Fine line',      desc:'Líneas finísimas y delicadas, sombreado suave y mucho aire. Elegante, minimalista y perfecto para empezar.', ideal:'primer tatuaje, flores, frases, símbolos' },
+  tradicional:   { name:'Tradicional',    desc:'El old school de toda la vida: línea gruesa, colores sólidos y motivos clásicos. Se lee de lejos y envejece de maravilla.', ideal:'golondrinas, rosas, dagas, panteras' },
+  blackwork:     { name:'Blackwork',      desc:'Negro intenso en grandes masas, geometría, ornamental y dotwork. Potente, contundente y con mucho carácter.', ideal:'mandalas, patrones, piezas grandes' },
+  neotradicional:{ name:'Neotradicional', desc:'La base del tradicional con más detalle, paletas ricas y composiciones ilustrativas. Lo clásico, evolucionado.', ideal:'animales, retratos ilustrados, flores' },
+  lettering:     { name:'Lettering',      desc:'Letras con estilo: caligrafía, gótica, script o chicano. Una palabra o una fecha pueden ser una obra de arte.', ideal:'nombres, fechas, frases' }
+};
+
+const ARTISTS = [
+  { id:'alex',  name:'Álex Ferrer', styles:['realismo','blackwork'],         ig:'fenix.alex',  foto:'', bio:'Fundador del estudio. Más de 12 años convirtiendo fotos y recuerdos en piel. Obsesionado con el contraste.' },
+  { id:'lucia', name:'Lucía Marí',  styles:['fineline','lettering'],         ig:'fenix.lucia', foto:'', bio:'Trazo delicado y paciencia infinita. La favorita de quien se tatúa por primera vez.' },
+  { id:'dani',  name:'Dani Roig',   styles:['tradicional','neotradicional'], ig:'fenix.dani',  foto:'', bio:'Color sólido y línea firme. Si te gusta el old school, este es tu sitio.' },
+  { id:'marta', name:'Marta Soler', styles:['blackwork','fineline'],         ig:'fenix.marta', foto:'', bio:'Geometría, ornamental y dotwork. Diseña cada pieza para que fluya con tu cuerpo.' }
+];
+
+const WORKS = [
+  { t:'Retrato de lobo',        a:'alex',  s:'realismo',       ar:'4/5' },
+  { t:'Rosa de línea fina',     a:'lucia', s:'fineline',       ar:'1/1' },
+  { t:'Golondrina clásica',     a:'dani',  s:'tradicional',    ar:'4/5' },
+  { t:'Mandala en espalda',     a:'marta', s:'blackwork',      ar:'3/4' },
+  { t:'Ojo hiperrealista',      a:'alex',  s:'realismo',       ar:'1/1' },
+  { t:'Frase en script',        a:'lucia', s:'lettering',      ar:'3/2' },
+  { t:'Pantera neotradicional', a:'dani',  s:'neotradicional', ar:'4/5' },
+  { t:'Ramillete botánico',     a:'marta', s:'fineline',       ar:'3/4' },
+  { t:'Manga ornamental',       a:'alex',  s:'blackwork',      ar:'2/3' },
+  { t:'Daga y corazón',         a:'dani',  s:'tradicional',    ar:'3/4' },
+  { t:'Constelación mínima',    a:'lucia', s:'fineline',       ar:'1/1' },
+  { t:'Geometría sagrada',      a:'marta', s:'blackwork',      ar:'1/1' },
+  { t:'Retrato de mascota',     a:'alex',  s:'realismo',       ar:'3/4' },
+  { t:'Nombre en gótica',       a:'lucia', s:'lettering',      ar:'3/2' },
+  { t:'Búho neotradicional',    a:'dani',  s:'neotradicional', ar:'1/1' },
+  { t:'Fénix en blackwork',     a:'marta', s:'blackwork',      ar:'4/5' }
+];
+
+/* Ilustraciones provisionales por estilo */
+const MOTIF = {
+  realismo:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 50c14-20 28-28 42-28s28 8 42 28c-14 20-28 28-42 28S22 70 8 50z"/><circle cx="50" cy="50" r="17"/><circle cx="50" cy="50" r="8" fill="currentColor" opacity=".7"/><circle cx="55" cy="45" r="3" fill="#121214"/><path d="M20 32l-4-6M32 25l-2-7M50 22v-8M68 25l2-7M80 32l4-6"/></svg>',
+  fineline:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><path d="M50 92V44"/><path d="M50 70c-10-2-16-8-18-16 8 0 14 4 18 10M50 62c10-2 16-8 18-16-8 0-14 4-18 10"/><path d="M50 44c-8 0-14-6-14-14 0-6 4-10 8-12 2 4 6 6 6 6s4-2 6-6c4 2 8 6 8 12 0 8-6 14-14 14z"/><path d="M44 26c2 4 4 8 6 18 2-10 4-14 6-18"/></svg>',
+  tradicional:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M50 6l5 10v44l-5 8-5-8V16z"/><path d="M34 60h32M44 68v14a6 6 0 0 0 12 0V68"/><path d="M50 94c-3 0-5-2-5-5"/><path d="M28 40c-6-10 4-18 10-12 2-8 14-6 12 4" stroke-width="2.4"/></svg>',
+  blackwork:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="50" cy="50" r="40"/><circle cx="50" cy="50" r="28"/><circle cx="50" cy="50" r="10" fill="currentColor"/><path d="M50 10l12 40-12 40-12-40zM10 50l40-12 40 12-40 12z"/><path d="M22 22l56 56M78 22 22 78" opacity=".6"/></svg>',
+  neotradicional:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M20 30l12 10 18-6 18 6 12-10-4 26c-2 18-14 30-26 34-12-4-24-16-26-34z"/><circle cx="38" cy="54" r="6"/><circle cx="62" cy="54" r="6"/><path d="M46 70l4 6 4-6"/><path d="M50 6c-4 8-4 14 0 20 4-6 4-12 0-20z"/></svg>',
+  lettering:'<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 64c6-24 12-34 16-30s-6 30-8 30 10-22 16-22-4 22 2 22 8-18 12-18-2 18 4 18 6-10 10-14c2 6 0 14 6 14 4 0 8-6 10-10"/><path d="M10 76h80" stroke-width="1"/></svg>'
+};
+
+const $ = (s, el=document) => el.querySelector(s);
+const artistById = id => ARTISTS.find(a => a.id === id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function art(src, styleKey, label, alt){
+  return src
+    ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">`
+    : `<div class="ph" role="img" aria-label="${esc(alt)}">${MOTIF[styleKey] || MOTIF.blackwork}<b>${esc(label)}</b></div>`;
+}
+
+/* ---------- Artistas ---------- */
+$('#artistsGrid').innerHTML = ARTISTS.map(a => `
+  <article class="artist reveal">
+    <div class="art">${art(a.foto, a.styles[0], 'Foto de ' + a.name.split(' ')[0], 'Foto de ' + a.name)}</div>
+    <div class="artist-body">
+      <h3>${esc(a.name)}</h3>
+      <div class="spec">${a.styles.map((s,i) => `<span class="tag${i===0?' hot':''}">${STYLES[s].name}</span>`).join('')}</div>
+      <p>${esc(a.bio)}</p>
+      <a class="ig" href="https://instagram.com/${esc(a.ig)}" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@${esc(a.ig)}</a>
+    </div>
+  </article>`).join('');
+
+$('#f-artist').insertAdjacentHTML('beforeend', ARTISTS.map(a => `<option>${esc(a.name)}</option>`).join(''));
+
+/* ---------- Estilos ---------- */
+$('#stylesGrid').innerHTML = Object.values(STYLES).map((s,i) => `
+  <div class="style reveal">
+    <span class="num">${String(i+1).padStart(2,'0')}</span>
+    <h3>${s.name}</h3>
+    <p>${s.desc}</p>
+    <p class="ideal"><b>Ideal para:</b> ${s.ideal}</p>
+  </div>`).join('');
+
+/* ---------- Galería ---------- */
+const grid = $('#grid');
+grid.innerHTML = WORKS.map((w,i) => `
+  <button class="tile" data-i="${i}" data-a="${w.a}" data-s="${w.s}" aria-label="Ampliar: ${esc(w.t)}">
+    <div class="art" style="aspect-ratio:${w.ar}">
+      ${art(w.src, w.s, STYLES[w.s].name, w.t)}
+      <span class="cap"><span>${esc(w.t)}</span><em>${esc(artistById(w.a).name.split(' ')[0])}</em></span>
+    </div>
+  </button>`).join('');
+
+const filter = { s:'all', a:'all' };
+function chips(container, key, items){
+  container.insertAdjacentHTML('beforeend',
+    [`<button class="chip" data-k="${key}" data-v="all" aria-pressed="true">Todos</button>`]
+      .concat(items.map(([v,label]) => `<button class="chip" data-k="${key}" data-v="${v}" aria-pressed="false">${esc(label)}</button>`)).join(''));
+}
+chips($('#fStyle'), 's', Object.entries(STYLES).map(([k,v]) => [k, v.name]));
+chips($('#fArtist'), 'a', ARTISTS.map(a => [a.id, a.name.split(' ')[0]]));
+
+function visibleIdx(){ return [...grid.children].filter(t => !t.classList.contains('hide')).map(t => +t.dataset.i); }
+function applyFilter(){
+  let n = 0;
+  for (const t of grid.children){
+    const ok = (filter.s === 'all' || t.dataset.s === filter.s) && (filter.a === 'all' || t.dataset.a === filter.a);
+    t.classList.toggle('hide', !ok); if (ok) n++;
+  }
+  $('#empty').style.display = n ? 'none' : 'block';
+}
+document.querySelector('.filters').addEventListener('click', e => {
+  const c = e.target.closest('.chip'); if (!c) return;
+  filter[c.dataset.k] = c.dataset.v;
+  c.parentElement.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', b === c));
+  applyFilter();
+});
+
+/* ---------- Lightbox ---------- */
+const lb = $('#lb'); let cur = 0, lastFocus = null;
+function show(i){
+  const list = visibleIdx(); if (!list.length) return;
+  cur = i; const w = WORKS[i], [x,y] = w.ar.split('/').map(Number);
+  const box = $('#lbArt');
+  box.style.setProperty('--ar', w.ar); box.style.setProperty('--arn', x/y);
+  box.innerHTML = art(w.src, w.s, STYLES[w.s].name, w.t);
+  $('#lbTitle').textContent = w.t;
+  $('#lbMeta').textContent = `${STYLES[w.s].name} · ${artistById(w.a).name}`;
+}
+function openLb(i){ lastFocus = document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; $('#lbClose').focus(); }
+function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; lastFocus && lastFocus.focus(); }
+function step(d){ const l = visibleIdx(); show(l[(l.indexOf(cur) + d + l.length) % l.length]); }
+grid.addEventListener('click', e => { const t = e.target.closest('.tile'); if (t) openLb(+t.dataset.i); });
+$('#lbClose').onclick = closeLb; $('#lbPrev').onclick = () => step(-1); $('#lbNext').onclick = () => step(1);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'ArrowRight') step(1);
+  if (e.key === 'Tab'){ const f = [...lb.querySelectorAll('button')]; const i = f.indexOf(document.activeElement);
+    e.preventDefault(); f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus(); }
+});
+let tx = null;
+lb.addEventListener('touchstart', e => tx = e.touches[0].clientX, {passive:true});
+lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null; });
+
+/* ---------- Header, menú, CTA móvil ---------- */
+const header = $('#header'), mcta = $('#mcta');
+const onScroll = () => {
+  header.classList.toggle('scrolled', scrollY > 40);
+  const r = $('#reservas').getBoundingClientRect();
+  mcta.classList.toggle('show', scrollY > innerHeight * .8 && !(r.top < innerHeight && r.bottom > 0));
+};
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+const burger = $('#burger');
+const setMenu = open => { document.body.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); };
+burger.onclick = () => setMenu(!document.body.classList.contains('menu-open'));
+$('#nav').addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+
+/* ---------- Brasas ---------- */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const em = $('#embers');
+  for (let i = 0; i < 26; i++){
+    const s = document.createElement('i');
+    s.style.left = Math.random()*100 + '%';
+    s.style.setProperty('--dx', (Math.random()*160 - 80) + 'px');
+    s.style.animationDuration = (7 + Math.random()*9) + 's';
+    s.style.animationDelay = (Math.random()*10) + 's';
+    const z = 1 + Math.random()*2; s.style.width = s.style.height = z + 'px';
+    em.appendChild(s);
+  }
+}
+
+/* ---------- Reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- Formulario ---------- */
+const form = $('#bookingForm'), fileInput = $('#f-files'), thumbs = $('#thumbs'), drop = $('#drop'), msg = $('#formMsg');
+let files = [];
+const MAX_FILES = 5, MAX_SIZE = 8 * 1024 * 1024;
+function addFiles(list){
+  for (const f of list){
+    if (!f.type.startsWith('image/') && !/\.heic$/i.test(f.name)) continue;
+    if (f.size > MAX_SIZE){ flash(`“${f.name}” supera los 8 MB.`); continue; }
+    if (files.length >= MAX_FILES){ flash('Máximo 5 imágenes.'); break; }
+    files.push(f);
+  }
+  renderThumbs();
+}
+function renderThumbs(){
+  thumbs.querySelectorAll('img').forEach(i => URL.revokeObjectURL(i.src));
+  thumbs.innerHTML = files.map((f,i) => `<figure><img src="${URL.createObjectURL(f)}" alt="Referencia ${i+1}"><button type="button" data-rm="${i}" aria-label="Quitar ${esc(f.name)}">×</button></figure>`).join('');
+}
+function flash(t, html){ msg[html ? 'innerHTML' : 'textContent'] = t; msg.classList.add('show'); }
+fileInput.addEventListener('change', () => { addFiles(fileInput.files); fileInput.value = ''; });
+thumbs.addEventListener('click', e => { const b = e.target.closest('[data-rm]'); if (b){ files.splice(+b.dataset.rm, 1); renderThumbs(); } });
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => addFiles(e.dataTransfer.files));
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  msg.classList.remove('show');
+  if (!form.checkValidity()){
+    const bad = form.querySelector(':invalid');
+    flash('Revisa los campos marcados con * — nos faltan algunos datos para poder ayudarte.');
+    bad && bad.focus(); return;
+  }
+  const age = +$('#f-age').value;
+  if (age < 18 && !confirm('Entre 16 y 17 años necesitamos autorización firmada y que venga contigo tu padre, madre o tutor. ¿Quieres continuar?')) return;
+
+  const data = new FormData(form);
+  data.delete('referencias');
+  files.forEach(f => data.append('referencias', f, f.name));
+  const endpoint = form.dataset.endpoint;
+  const btn = $('#submitBtn');
+
+  if (endpoint){
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    try{
+      const r = await fetch(endpoint, { method:'POST', body:data, headers:{ Accept:'application/json' } });
+      if (!r.ok) throw new Error();
+      form.reset(); files = []; renderThumbs();
+      flash(`¡Gracias, ${esc(data.get('nombre'))}! Hemos recibido tu idea. Te escribimos en menos de 48 h. 🔥`, true);
+    }catch{
+      flash('No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos por <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>.', true);
+    }finally{ btn.disabled = false; btn.textContent = 'Enviar solicitud'; }
+    return;
+  }
+
+  // Sin servidor configurado: se prepara el mensaje para enviarlo por WhatsApp.
+  const text = [
+    'Hola Fenix Tatoo, quiero pedir cita:',
+    `• Nombre: ${data.get('nombre')} (${data.get('edad')} años)`,
+    `• Contacto: ${data.get('telefono')} / ${data.get('email')}`,
+    `• Artista: ${data.get('artista')}`,
+    `• Zona: ${data.get('zona')}`,
+    `• Tamaño: ${data.get('tamano')}`,
+    `• Idea: ${data.get('idea')}`,
+    data.get('primera_vez') ? '• Es mi primer tatuaje' : '',
+    files.length ? `• Tengo ${files.length} imagen(es) de referencia para enviaros por aquí.` : ''
+  ].filter(Boolean).join('\n');
+  const wa = 'https://wa.me/34600000000?text=' + encodeURIComponent(text);
+  flash(`¡Genial, ${esc(data.get('nombre'))}! Tu solicitud está lista. <a href="${wa}" target="_blank" rel="noopener"><strong>Pulsa aquí para enviarla por WhatsApp</strong></a>${files.length ? ' y adjunta allí tus imágenes de referencia' : ''}.`, true);
+});
+
+$('#year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
