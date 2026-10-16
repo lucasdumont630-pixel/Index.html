@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Fenix Tatoo Dénia · Estudio de tatuajes en Dénia, Alicante</title>
-<meta name="description" content="Fenix Tatoo Dénia: estudio de tatuajes en Dénia (Alicante). Realismo, fine line, tradicional, blackwork y más. Material estéril, trato cercano. Pide tu cita.">
+<meta name="description" content="Fenix Tatoo Dénia: estudio de tatuajes y piercing en Calle Diana 48, Dénia (Alicante). Tatuajes a medida, eliminación de tatuajes y gemas dentales. Tel. 658 349 715.">
 <meta name="theme-color" content="#0b0b0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +198,13 @@ section{padding:clamp(72px,11vw,140px) 0;position:relative}
 .style p{color:var(--muted);font-size:15px}
 .style .ideal{margin-top:16px;font-size:13px;color:var(--fg)}
 .style .ideal b{color:var(--gold);font-weight:600}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+@media (max-width:900px){.services{grid-template-columns:1fr}}
+.svc{border:1px solid rgba(201,164,92,.25);border-radius:var(--radius);padding:28px;background:linear-gradient(180deg,rgba(201,164,92,.06),transparent)}
+.svc .num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:24px}
+.svc h3{font-family:var(--display);font-size:32px;margin:6px 0 10px}
+.svc p{color:var(--muted);font-size:15px}
 
 /* ---------- Process ---------- */
 .process{background:var(--bg-2)}
@@ -450,8 +457,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <span class="eyebrow">Estilos</span>
     <h2 class="h2 reveal">Encuentra <em>tu</em> lenguaje</h2>
-    <p class="lead reveal">¿No sabes qué estilo encaja contigo? Aquí tienes una guía rápida. Y si sigues con dudas, para eso estamos.</p>
+    <p class="lead reveal">Además de tatuajes, hacemos piercing, eliminación de tatuajes y gemas dentales. ¿No sabes qué estilo encaja contigo? Aquí tienes una guía rápida. Y si sigues con dudas, para eso estamos.</p>
     <div class="styles-grid" id="stylesGrid"></div>
+    <div class="services">
+      <div class="svc reveal"><span class="num">+</span><h3>Piercing</h3><p>Todo tipo de piercings con material estéril y joyería de calidad. Te aconsejamos la pieza y la zona.</p></div>
+      <div class="svc reveal"><span class="num">+</span><h3>Eliminación de tatuajes</h3><p>¿Un tatuaje del que te arrepientes? Lo borramos o lo aclaramos para un cover-up. Servicio disponible solo en el estudio de Dénia.</p></div>
+      <div class="svc reveal"><span class="num">+</span><h3>Gemas dentales</h3><p>Brillo en tu sonrisa sin dañar el diente. Aplicación con cita previa.</p></div>
+    </div>
   </div>
 </section>
 
@@ -655,7 +667,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </section>
 
 <!-- ============ 9. CONTACTO ============ -->
-<!-- IMPORTANTE: sustituye dirección, teléfono, horario y redes por los datos reales del estudio. -->
 <section class="contact" id="contacto">
   <div class="wrap">
     <span class="eyebrow">Contacto</span>
@@ -665,37 +676,34 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div class="info">
         <div>
           <h3>Dirección</h3>
-          <p>Calle Ejemplo, 00<br>03700 Dénia, Alicante</p>
-          <p style="margin-top:10px"><a href="https://maps.google.com/?q=D%C3%A9nia%2C+Alicante" target="_blank" rel="noopener">Cómo llegar →</a></p>
+          <p>Calle Diana, 48<br>03700 Dénia, Alicante</p>
+          <p style="margin-top:10px"><a href="https://www.google.com/maps/search/?api=1&query=Fenix+Tattoo+Studio+Calle+Diana+48+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar →</a></p>
         </div>
         <div>
           <h3>Teléfono</h3>
-          <p><a href="tel:+34600000000">+34 600 000 000</a></p>
-          <p style="margin-top:10px"><a href="https://wa.me/34600000000" target="_blank" rel="noopener" id="waLink">Escríbenos por WhatsApp →</a></p>
+          <p><a href="tel:+34658349715">658 349 715</a></p>
+          <p style="margin-top:10px"><a href="https://wa.me/34658349715" target="_blank" rel="noopener" id="waLink">Escríbenos por WhatsApp →</a></p>
         </div>
         <div>
           <h3>Horario</h3>
           <div class="hours">
-            <span>Lunes</span><b>Cerrado</b>
-            <span>Mar – Vie</span><b>10:30 – 14:00 · 16:30 – 20:30</b>
-            <span>Sábado</span><b>10:30 – 14:00</b>
+            <span>Lunes – Sábado</span><b>11:00 – 20:00</b>
             <span>Domingo</span><b>Cerrado</b>
           </div>
         </div>
         <div>
           <h3>Redes</h3>
           <div class="socials">
-            <a href="https://instagram.com/fenixtatoodenia" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
-            <a href="https://facebook.com/fenixtatoodenia" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
-            <a href="https://tiktok.com/@fenixtatoodenia" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
-            <a href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+            <a href="https://instagram.com/fenixtattoostudio" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+            <a href="https://wa.me/34658349715" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
           </div>
-          <p style="margin-top:12px;color:var(--muted);font-size:14px">hola@fenixtatoodenia.com</p>
+          <p style="margin-top:12px;color:var(--muted);font-size:14px">@fenixtattoostudio</p>
+          <p style="margin-top:14px;color:var(--dim);font-size:13px">También en Benidorm · Carrer Alt, 4</p>
         </div>
       </div>
       <div class="map">
         <iframe title="Mapa de Fenix Tatoo en Dénia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=D%C3%A9nia%2C%20Alicante&z=15&output=embed"></iframe>
+          src="https://www.google.com/maps?q=Calle%20Diana%2048%2C%2003700%20D%C3%A9nia%2C%20Alicante&z=17&output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -957,7 +965,7 @@ form.addEventListener('submit', async e => {
       form.reset(); files = []; renderThumbs();
       flash(`¡Gracias, ${esc(data.get('nombre'))}! Hemos recibido tu idea. Te escribimos en menos de 48 h. 🔥`, true);
     }catch{
-      flash('No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos por <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>.', true);
+      flash('No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos por <a href="https://wa.me/34658349715" target="_blank" rel="noopener">WhatsApp</a>.', true);
     }finally{ btn.disabled = false; btn.textContent = 'Enviar solicitud'; }
     return;
   }
@@ -974,7 +982,7 @@ form.addEventListener('submit', async e => {
     data.get('primera_vez') ? '• Es mi primer tatuaje' : '',
     files.length ? `• Tengo ${files.length} imagen(es) de referencia para enviaros por aquí.` : ''
   ].filter(Boolean).join('\n');
-  const wa = 'https://wa.me/34600000000?text=' + encodeURIComponent(text);
+  const wa = 'https://wa.me/34658349715?text=' + encodeURIComponent(text);
   flash(`¡Genial, ${esc(data.get('nombre'))}! Tu solicitud está lista. <a href="${wa}" target="_blank" rel="noopener"><strong>Pulsa aquí para enviarla por WhatsApp</strong></a>${files.length ? ' y adjunta allí tus imágenes de referencia' : ''}.`, true);
 });
 
